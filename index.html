@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>verifier</title>
+    <title>Certificate Look-up!</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="background"></div>
+    <div class="version">
+        <div>Contract: <span id="cert-version">0x...</span></div>
+    </div>
+    <div class="main">
+        <div class="main">
+            <input class="input" id="school-address-input" placeholder="School Address"/>
+            <input class="input" id="cert-on-chain-id-input" placeholder="Certificate Id."/>
+            <div class="search">
+                <button class="submit" id="search-button">
+                    <div class="text">Search</div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="info" id="cert-info"></div>
+    <div class="info" id="error-pane"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js" integrity="sha512-/PTXSvaFzmO4So7Ghyq+DEZOz0sNLU4v1DP4gMOfY3kFu9L/IKoqSHZ6lNl3ZoZ7wT20io3vu/U4IchGcGIhfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
 </body>
