@@ -1,6 +1,6 @@
 console.log('Hanoi, Feb. 10th, 2022')
 
-const HTTP_PROVIDER = 'http://rinkeby.infura.io/v3/c690146f1ff145f096edbb6f90579fa6';
+const HTTP_PROVIDER = '//rinkeby.infura.io/v3/c690146f1ff145f096edbb6f90579fa6';
 const CONTRACT_INFO_URL = window.location.pathname.replace('/index.html', '') + '/Certs.json';
 const SCHOOL_LIST_URL = window.location.pathname.replace('/index.html', '') + '/schools.json';
 
@@ -114,9 +114,13 @@ async function getCertInfo() {
 
 
 window.onload = async function () {
-    await loadWeb3();
-    await getAccounts();
-    await getContract();
-    await getSchools();
+    try {
+        await loadWeb3();
+        await getAccounts();
+        await getContract();
+        await getSchools();
+    } catch (err) {
+        displayError('Something went wrong!', err.message);
+    }
 };
 
